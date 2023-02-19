@@ -1,9 +1,9 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+draft: false
 sidebar: true
 tags: []
-hero: ""
+hero: "hero.png"
 summary: ""
 ---
