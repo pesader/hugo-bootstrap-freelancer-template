@@ -15,18 +15,9 @@
 					{{ range .Paginator.Pages }}
 					<div class="col-md-4">
 						<div class="card mb-4 ">
-							<a href="{{.Permalink}}"><img class="card-img-top" src="{{.Permalink}}{{.Page.Params.Hero}}" alt="Card image cap"></a>
+							<a href="{{.Permalink}}" class="stretched-link"><img class="card-img-top" src="{{.Permalink}}{{.Page.Params.Hero}}" alt="Card image cap"></a>
 						  <div class="card-body">
 							<h5 class="card-title">{{ .Title }}</h5>
-							<p class="card-text text-center">{{ .Summary }}</p>
-						  </div>
-						  <div class="card-footer">
-							<div class="d-flex justify-content-between align-items-center">
-								<small class="text-muted">{{ .ReadingTime }} minute{{ if (ne .ReadingTime 1) }}s{{ end }}</small>
-								<div class="btn-group">
-								<a href="{{.Permalink}}" class="btn  btn-lg btn-primary ">Read More</a>
-								</div>
-							</div>
 						  </div>
 						</div>
 					  </div>                
