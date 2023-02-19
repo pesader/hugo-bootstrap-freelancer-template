@@ -12370,12 +12370,12 @@ html {
 
 @media (min-width: 992px) {
   .masthead {
-    padding-top: calc(6rem + 104px);
+    padding-top: calc(6rem + 50px);
     padding-bottom: 6rem;
   }
 
   .masthead .masthead-heading {
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 3.5rem;
   }
 
