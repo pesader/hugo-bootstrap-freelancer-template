@@ -12,15 +12,27 @@
             <!-- Portfolio Grid Items-->
             <div class="row justify-content-left">
                 <!-- Portfolio Item 1-->
-		{{ range .Paginator.Pages }}
-		<div class="col-md-4">
-			<div class="card mb-4 ">
-				<a href="{{.Permalink}}" class="stretched-link"><img class="card-img-top" src="{{.Permalink}}{{.Page.Params.Hero}}" alt="Card image cap"></a>
-			  <div class="card-body">
-				<h5 class="card-title">{{ .Title }}</h5>
+		{{ if ne .Title "Bits" }}
+			{{ range .Paginator.Pages }}
+			<div class="col-md-4">
+				<div class="card mb-4 ">
+					<a href="{{.Permalink}}" class="stretched-link"><img class="card-img-top" src="{{.Permalink}}{{.Page.Params.Hero}}" alt="Card image cap"></a>
+				  <div class="card-body">
+					<h5 class="card-title">{{ .Title }}</h5>
+				  </div>
+				</div>
 			  </div>
-			</div>
-		  </div>                
+			{{ end }}
+		{{ else }}
+			{{ range .Paginator.Pages }}
+			<div class="col-md-4">
+				<div class="card mb-4 ">
+				  <div class="card-body">
+					<h5 class="card-title">{{ .Title }}</h5>
+				  </div>
+				</div>
+			  </div>
+			{{ end }}
 		{{ end }}
 		<div class="col-12 p-3">
 			<div class="d-flex justify-content-center">{{ partial "pagination.html" . }}</div>
