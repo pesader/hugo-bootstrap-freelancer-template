@@ -16,5 +16,9 @@
     </div>
 </header>
 {{ else }}
-<header class="masthead2 text-white text-center"></header>
+    {{ if and (eq .Kind "page") (or (eq .Section "posts") (eq .Section "projects") (eq .Section "bits")) }}
+    <header class="text-white text-center"></header>
+    {{ else }}
+    <header class="masthead2 text-white text-center"></header>
+    {{ end }}
 {{ end }}

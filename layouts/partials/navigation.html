@@ -1,4 +1,8 @@
+{{ if and (eq .Kind "page") (or (eq .Section "posts") (eq .Section "projects") (eq .Section "bits")) }}
+<nav class="navbar navbar-expand-lg bg-secondary" id="mainNav">
+{{ else }}
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+{{ end }}
     <div class="container">
         <a class="navbar-brand" href="/">{{ .Site.Title }}</a>
         <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
