@@ -12360,6 +12360,7 @@ html {
 .masthead .masthead-heading {
   font-size: 2.75rem;
   line-height: 2.75rem;
+  color: var(--bs-white);
 }
 
 .masthead .masthead-subheading {
