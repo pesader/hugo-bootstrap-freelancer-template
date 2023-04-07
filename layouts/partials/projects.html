@@ -1,9 +1,6 @@
-
-{{ $element  :=  first .Site.Params.HomeProjects (where .Site.RegularPages.ByDate.Reverse "Section" "projects") }}
-
+{{ $element := first .Site.Params.HomeProjects (where .Site.RegularPages.ByDate.Reverse "Section" "projects") }}
 
 {{ if $element }}
-
 <section class="page-section portfolio pb-5" id="portfolio">
 	<div class="container">
 		<!-- Portfolio Section Heading-->
