@@ -18,7 +18,7 @@
 			<div class="col-md-4">
 				<div class="card mb-4">
 					<a href="{{.Permalink}}" class="stretched-link">
-						<img class="card-img-top" src="{{.Permalink}}{{.Page.Params.Hero}}" alt="Card image cap">
+						<img class="card-img-top" src="{{.Permalink}}{{ default .Page.Params.Hero .Page.Params.Thumbnail}}" alt="Card image cap">
 					</a>
 					<div class="card-body">
 						<h5 class="card-title">{{ .Title }}</h5>
