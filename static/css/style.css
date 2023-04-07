@@ -12395,6 +12395,10 @@ html {
   color: #fff;
 }
 
+.footer-header {
+  color: var(--bs-white);
+}
+
 .copyright {
   background-color: #1a252f;
 }
