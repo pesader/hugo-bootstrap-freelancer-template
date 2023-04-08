@@ -1,4 +1,4 @@
-{{ $element :=  first .Site.Params.HomePosts (where .Site.RegularPages.ByDate.Reverse "Section" "bits") }}
+{{ $element :=  first .Site.Params.HomeBits (where .Site.RegularPages.ByDate.Reverse "Section" "bits") }}
 
 {{ if $element }}
 <section class="page-section portfolio pb-5" id="bits">
