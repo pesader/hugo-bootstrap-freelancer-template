@@ -342,6 +342,11 @@ svg {
   vertical-align: middle;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 table {
   caption-side: bottom;
   border-collapse: collapse;
@@ -645,11 +650,6 @@ progress {
 
 .blockquote-footer::before {
   content: "— ";
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
 }
 
 .img-thumbnail {
