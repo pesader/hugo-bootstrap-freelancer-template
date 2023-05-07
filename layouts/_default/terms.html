@@ -1,0 +1,29 @@
+{{ define "main" }}
+	<section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mt-5">{{ .Title  }}</h2>
+            <!-- Icon Divider-->
+			<div class="divider-custom">
+				<div class="divider-custom-line"></div>
+				<div class="divider-custom-icon"><em class="fas fa-star"></em></div>
+				<div class="divider-custom-line"></div>
+			</div>
+            <!-- Portfolio Grid Items-->
+            <div class="row justify-content-left">
+                <!-- Portfolio Item 1-->
+				<div class="row  mb-3 ">
+					<div class="col text-center text-nowrap ">
+					{{ range .Site.Taxonomies.tags }}
+						<a class="h4" href="{{ .Page.Permalink }}" title="{{ .Page.Title }}"><span class="badge bg-primary p-2 m-1 ">{{ .Page.Title }}</span></a>
+					{{end}}
+					</div>
+				</div>
+				<div class="col-12 p-3">
+					<div class="d-flex justify-content-center">{{ partial "pagination.html" . }}</div>
+					
+				</div>
+            </div>
+        </div>
+    </section>
+{{ end }}
