@@ -1,3 +1,3 @@
 <p class="md__image">
-  <img src="{{ printf "%s/%s" .Page.Permalink .Destination | safeURL }}" alt="{{ .Text }}"/>
+  <img src="{{ printf "%s%s" .Page.Permalink .Destination | safeURL }}" alt="{{ .Text }}"/>
 </p>
