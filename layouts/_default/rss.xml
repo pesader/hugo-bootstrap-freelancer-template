@@ -35,7 +35,7 @@
       <description>
           {{ if (ne .Params.Hero nil) }}
           {{ $heroURL := (safeURL (printf "%s%s" .Permalink .Params.Hero))  }}
-          {{ printf "<p><img src=$heroURL></p>"}}
+          {{ printf "<p><img src=%s></p>" $heroURL}}
           {{ end }}
           {{ .Content | html }}
       </description>
