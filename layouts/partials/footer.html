@@ -12,14 +12,10 @@
 			</div>
 			<!-- Footer Social Icons-->
 			<div class="col-lg-4 mb-5 mb-lg-0">
-
-
-
-
 				<h4 class="text-uppercase footer-header mb-4">Around the Web</h4>
 				
 				{{ range .Site.Params.Social }}
-				<a class="btn btn-outline-light btn-social mx-1" href="{{.url}}"
+				<a class="btn btn-outline-light btn-social mx-1" href="{{.url}}" rel="me"
 				target="_blank"><em class="{{.icon_pack}} fa-fw fa-{{.icon}}"></em></a>
 			  	{{end}}
 				  
