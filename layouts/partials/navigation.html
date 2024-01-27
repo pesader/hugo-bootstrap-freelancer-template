@@ -1,7 +1,7 @@
 {{ if and (eq .Kind "page") (or (eq .Section "posts") (eq .Section "projects") (eq .Section "bits")) }}
-<nav class="navbar navbar-expand-lg bg-secondary" id="mainNav">
+<nav class="navbar navbar-expand-lg bg-secondary py-1" id="mainNav">
 {{ else }}
-<nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg bg-secondary py-1 fixed-top" id="mainNav">
 {{ end }}
     <div class="container">
         <a class="navbar-brand" href="/">{{ .Site.Title }}</a>
@@ -14,8 +14,8 @@
         <div class="collapse navbar-collapse text-uppercase" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
                 {{ range .Site.Sections.ByWeight }}
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                    href="{{ .Permalink }}"> {{ .Title }} </a>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ .Permalink }}"> {{ .Title }} </a>
                 {{end}}
             </ul>
         </div>
