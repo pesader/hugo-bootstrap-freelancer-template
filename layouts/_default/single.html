@@ -32,12 +32,13 @@
 				</div>
 
 			</div>
-		<section class="page-section portfolio {{ if .Page.Params.sidebar }} col-lg-10 col-12 {{ end }} " >
-		
-			{{ if .Page.Params.sidebar }}
-				{{ partial "sidebar.html" . }}
-			{{ end }}
 	</div>
+
+	{{ if .Page.Params.sidebar }}
+		<hr>
+		{{ partial "sidebar.html" . }}
+	{{ end }}
+
 </div>
 
 
