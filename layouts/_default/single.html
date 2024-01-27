@@ -3,7 +3,8 @@
 	<div class="row justify-content-md-center">
 		<section class="page-section portfolio {{ if .Page.Params.sidebar }} col-lg-10 col-12 {{ end }} " >
 			{{ if (ne .Page.Params.Hero "") }}
-			<img class="card-img-top" src="{{.Permalink}}{{.Page.Params.Hero}}" alt="">
+			{{ $defaultHero := "hero.png" }}
+			<img class="card-img-top" src="{{.Permalink}}{{default $defaultHero .Page.Params.Hero}}" alt="Hero image">
 			{{ end }}
 				<!-- Portfolio Section Heading-->
 				<h2 class="page-section-heading text-center text-secondary mt-5">{{ .Title  }}</h2>
