@@ -4640,6 +4640,12 @@ fieldset:disabled .btn {
   overflow-y: auto;
 }
 
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 18px;
+    }
+}
+
 @media (min-width: 576px) {
   .navbar-expand-sm {
     flex-wrap: nowrap;
