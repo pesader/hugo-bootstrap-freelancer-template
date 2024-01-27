@@ -4642,7 +4642,7 @@ fieldset:disabled .btn {
 
 @media (max-width: 768px) {
     .navbar-nav .nav-link {
-        font-size: 18px;
+        font-size: 0.75em;
     }
 }
 
