@@ -5130,6 +5130,7 @@ fieldset:disabled .btn {
   background-clip: border-box;
   border: 0.125rem solid rgba(0, 0, 0, 0.125);
   border-radius: 0.5rem;
+  transition: transform 0.2s ease-in-out;
 }
 
 .card>hr {
@@ -5162,6 +5163,10 @@ fieldset:disabled .btn {
 .card-body {
   flex: 1 1 auto;
   padding: 1rem 1rem;
+}
+
+.card:hover {
+  transform: scale(1.03);
 }
 
 .card-title {
