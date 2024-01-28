@@ -1,0 +1,17 @@
+{{ if eq .Type "bits" }}
+	{{ partial "card.html" (dict "link" .Permalink
+	                                "title" .Title) }}
+
+{{ else if eq .Type "posts" }}
+	{{ $thumbnail := (default "thumbnail.png" .Page.Params.Thumbnail) }}
+	{{ partial "card.html" (dict "link" .Permalink
+	                                "title" .Title
+									"image" $thumbnail ) }}
+
+{{ else if eq .Type "projects" }}
+	{{ $thumbnail := (default "thumbnail.png" .Page.Params.Thumbnail) }}
+	{{ partial "card.html" (dict "link" .Permalink
+	                                "title" .Title
+									"image" $thumbnail ) }}
+
+{{ end }}

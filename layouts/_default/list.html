@@ -14,16 +14,7 @@
                 <!-- Portfolio Item 1-->
 			{{ range .Paginator.Pages }}
 			<div class="col-md-4">
-				<div class="card mb-4 ">
-					{{ if ne .Type "bits" }}
-					{{ $defaultThumbnail := "thumbnail.png" }}
-					<img class="card-img-top" src="{{.Permalink}}{{default $defaultThumbnail .Page.Params.Thumbnail}}" alt="Card image cap">
-					{{ end }}
-					<div class="card-body">
-						<a href="{{.Permalink}}" class="stretched-link"></a>
-						<h5 class="card-title text-center">{{ .Title }}</h5>
-					</div>
-				</div>
+				{{ partial "item.html" . }}
 			  </div>
 			{{ end }}
 		<div class="col-12 p-3">

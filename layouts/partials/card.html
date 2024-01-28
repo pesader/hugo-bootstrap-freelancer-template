@@ -1,0 +1,12 @@
+<div class="card mb-4 ">
+	<!-- Thumbnail image -->
+	{{ with .image }}
+		<img class="card-img-top" src="{{ $.link }}{{ . }}" alt="Card image">
+	{{ end }}
+
+	<!-- Title -->
+	<div class="card-body">
+		<a href="{{ .link }}" class="stretched-link"></a>
+		<h5 class="card-title text-center">{{ .title }}</h5>
+	</div>
+</div>
