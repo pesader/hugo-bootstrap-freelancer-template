@@ -12,6 +12,7 @@
 	{{ $thumbnail := (default "thumbnail.png" .Page.Params.Thumbnail) }}
 	{{ partial "card.html" (dict "link" .Permalink
 	                                "title" .Title
-									"image" $thumbnail ) }}
+									"image" $thumbnail
+									"summary" .Page.Params.Summary) }}
 
 {{ end }}

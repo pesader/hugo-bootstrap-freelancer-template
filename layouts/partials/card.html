@@ -4,9 +4,13 @@
 		<img class="card-img-top" src="{{ $.link }}{{ . }}" alt="Card image">
 	{{ end }}
 
-	<!-- Title -->
+	<!-- Title and summary -->
 	<div class="card-body">
 		<a href="{{ .link }}" class="stretched-link"></a>
 		<h5 class="card-title text-center">{{ .title }}</h5>
+		{{ with .summary }}
+		<hr>
+			<p class="text-muted"> {{ . }} </p>
+		{{ end }}
 	</div>
 </div>
